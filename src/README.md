@@ -2,7 +2,7 @@
 home: true
 layout: BlogHome
 icon: house
-title: 三七的小博客
+title: yao三七的小博客
 bglImage: default.jpg
 bglImageDark: default.jpg
 heroImage: head.svg
