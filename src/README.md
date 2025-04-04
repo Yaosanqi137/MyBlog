@@ -2,21 +2,16 @@
 home: true
 layout: BlogHome
 icon: house
-title: 博客主页
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: 你博客的名称
+title: 三七的小博客
+heroImage: head.svg
+heroText: Yao三七的小博客
 heroFullScreen: true
-tagline: 你可以在这里放置你的口号与标语
+tagline: 我的计算机学习分享博客
 projects:
-  - icon: folder-open
-    name: 项目名称
-    desc: 项目详细描述
-    link: https://你的项目链接
-
   - icon: link
-    name: 链接名称
-    desc: 链接详细描述
-    link: https://链接地址
+    name: 友站
+    desc: 某人的博客网站
+    link: https://blog.w1nt0n.cn/
 
   - icon: book
     name: 书籍名称
@@ -34,15 +29,13 @@ projects:
     link: https://你的伙伴链接
 
   - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: 自定义项目
-    desc: 自定义详细介绍
-    link: https://你的自定义链接
-
-footer: 自定义你的页脚文字
+    name: 本博客主题出处
+    desc: 项目详细描述
+    link: https://theme-hope.vuejs.press/
 ---
 
-这是一个博客主页的案例。
+<!-- 这是一个博客主页的案例。
 
 要使用此布局，你应该在页面前端设置 `layout: BlogHome` 和 `home: true`。
 
-相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html)。
+相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html)。 -->

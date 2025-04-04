@@ -4,16 +4,16 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://gstech.fun",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Yaosanqi137",
+    url: "https://gstech.fun",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "https://www.helloimg.com/i/2025/04/04/67ef6c90ab373.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "Yaosanqi137/MyBlog",
 
   docsDir: "src",
 
@@ -24,49 +24,22 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: '<center><a href="https://beian.miit.gov.cn/" target="_blank">备案号: 粤ICP备2025389882号-1</a><br>本网站是个人网站，仅供个人学习使用，不包含任何企业、单位等任何非个人网站信息<br>若被核实确实存在违规信息，本人愿意接受相关处罚。</center>',
   displayFooter: true,
+
+  favicon: "favicon.png",
 
   // 博客相关
   blog: {
-    description: "一个前端开发者",
+    description: "一个来自中国海洋大专的计算机科学学生",
     intro: "/intro.html",
     medias: {
-      Baidu: "https://example.com",
-      BiliBili: "https://example.com",
-      Bitbucket: "https://example.com",
-      Dingding: "https://example.com",
-      Discord: "https://example.com",
-      Dribbble: "https://example.com",
+      BiliBili: "https://space.bilibili.com/363216678",
+      Discord: "discordapp.com/users/1068046478972563527",
       Email: "mailto:info@example.com",
-      Evernote: "https://example.com",
-      Facebook: "https://example.com",
-      Flipboard: "https://example.com",
-      Gitee: "https://example.com",
       GitHub: "https://example.com",
-      Gitlab: "https://example.com",
-      Gmail: "mailto:info@example.com",
-      Instagram: "https://example.com",
-      Lark: "https://example.com",
-      Lines: "https://example.com",
-      Linkedin: "https://example.com",
-      Pinterest: "https://example.com",
-      Pocket: "https://example.com",
-      QQ: "https://example.com",
-      Qzone: "https://example.com",
-      Reddit: "https://example.com",
-      Rss: "https://example.com",
-      Steam: "https://example.com",
-      Twitter: "https://example.com",
+      QQ: "3212576603",
       Wechat: "https://example.com",
-      Weibo: "https://example.com",
-      Whatsapp: "https://example.com",
-      Youtube: "https://example.com",
-      Zhihu: "https://example.com",
-      VuePressThemeHope: {
-        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-        link: "https://theme-hope.vuejs.press",
-      },
     },
   },
 
