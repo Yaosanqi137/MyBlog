@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: house
 title: 三七的小博客
-heroImage: head.svg
+heroImage: /assets/images/head.svg
 heroText: Yao三七的小博客
 heroFullScreen: true
 tagline: 我的计算机学习分享博客
