@@ -24,7 +24,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">备案号: 粤ICP备2025389882号-1</a><br>' +
+  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2025389882号-1</a><br>' +
       '本网站是个人网站，仅供个人学习使用，不包含任何企业、单位等任何非个人网站信息<br>' +
       '若被核实确实存在违规信息，本人愿意接受相关处罚。<br>' +
       'Copyright © 2025 Yaosanqi137 MIT Licensed',
