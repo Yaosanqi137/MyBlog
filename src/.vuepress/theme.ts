@@ -11,7 +11,7 @@ export default hopeTheme({
     url: "https://gstech.fun",
   },
 
-  logo: "https://www.helloimg.com/i/2025/04/04/67ef6c90ab373.png",
+  logo: "head.png",
 
   repo: "Yaosanqi137/MyBlog",
 
@@ -24,8 +24,12 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: '<center><a href="https://beian.miit.gov.cn/" target="_blank">备案号: 粤ICP备2025389882号-1</a><br>本网站是个人网站，仅供个人学习使用，不包含任何企业、单位等任何非个人网站信息<br>若被核实确实存在违规信息，本人愿意接受相关处罚。</center>',
+  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">备案号: 粤ICP备2025389882号-1</a><br>' +
+      '本网站是个人网站，仅供个人学习使用，不包含任何企业、单位等任何非个人网站信息<br>' +
+      '若被核实确实存在违规信息，本人愿意接受相关处罚。<br>' +
+      'Copyright © 2025 Yaosanqi137 MIT Licensed',
   displayFooter: true,
+  copyright: false,
 
   favicon: "favicon.png",
 
@@ -35,11 +39,10 @@ export default hopeTheme({
     intro: "/intro.html",
     medias: {
       BiliBili: "https://space.bilibili.com/363216678",
-      Discord: "discordapp.com/users/1068046478972563527",
-      Email: "mailto:info@example.com",
-      GitHub: "https://example.com",
-      QQ: "3212576603",
-      Wechat: "https://example.com",
+      Email: "intro.html",
+      GitHub: "https://yaosanqi137",
+      QQ: "intro.html",
+      Wechat: "intro.html",
     },
   },
 

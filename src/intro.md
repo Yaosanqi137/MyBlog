@@ -18,13 +18,24 @@ cover: /assets/images/intro.webp
 
 在这个博客里，我有时候会分享一些我觉得有意思的项目和教学文档，大家可以学习参考一下
 
-## 这个博客的信息
+## ℹ 博客信息
 
 主题出处：[Vuepress-theme-hope](https://theme-hope.vuejs.press/)
 
 GitHub 仓库: [Yaosanqi137/MyBlog](https://github.com/Yaosanqi137/MyBlog)
 
-![](https://img.shields.io/github/commit-activity/m/Yaosanqi137/MyBlog)
+![](https://img.shields.io/github/commit-activity/m/Yaosanqi137/MyBlog) ![](https://img.shields.io/github/license/Yaosanqi137/MyBlog) ![](https://img.shields.io/github/created-at/Yaosanqi137/MyBlog)
+
+## 📞 联系我
+
+- QQ: `3212576603`
+
+- 微信: `y7866819721`
+
+- 邮箱: `zxc18023571263@outlook.com` | `3212576603@qq.com`
+
+- B站: [yao37](https://space.bilibili.com/363216678)
+
 
 
 

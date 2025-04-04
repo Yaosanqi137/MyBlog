@@ -2,7 +2,7 @@
   "name": "yao37-blog",
   "description": "My blog",
   "version": "114.514.1919810",
-  "license": "HJT",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress-vite build src",

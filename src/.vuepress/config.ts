@@ -6,10 +6,9 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "博客演示",
-  description: "vuepress-theme-hope 的博客演示",
+  title: "yao37的小博客",
+  description: "yao37的小博客",
 
-  theme,
   bundler: viteBundler({
     viteOptions: {
         server: {
@@ -19,4 +18,6 @@ export default defineUserConfig({
   }),
   // 和 PWA 一起启用
   // shouldPrefetch: false,
+
+    theme,
 });
