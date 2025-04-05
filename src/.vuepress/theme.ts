@@ -40,7 +40,7 @@ export default hopeTheme({
     medias: {
       BiliBili: "https://space.bilibili.com/363216678",
       Email: "intro.html",
-      GitHub: "https://yaosanqi137",
+      GitHub: "https://github.com/Yaosanqi137/",
       QQ: "intro.html",
       Wechat: "intro.html",
     },
