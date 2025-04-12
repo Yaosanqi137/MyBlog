@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from '@vuepress/bundler-vite'
-import theme from "./theme.js";
+
+import {hopeTheme} from "vuepress-theme-hope";
 
 export default defineUserConfig({
   base: "/",
@@ -19,5 +20,11 @@ export default defineUserConfig({
   // 和 PWA 一起启用
   // shouldPrefetch: false,
 
-    theme,
+    theme: hopeTheme({
+        markdown: {
+            math: {
+                type: "katex",
+            },
+        },
+    }),
 });
