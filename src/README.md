@@ -3,8 +3,7 @@ home: true
 layout: BlogHome
 icon: house
 title: yao三七的小博客
-bglImage: default.jpg
-bglImageDark: default.jpg
+bgImage: default.png
 heroImage: head.svg
 heroText: Yao三七的小博客
 heroFullScreen: true
