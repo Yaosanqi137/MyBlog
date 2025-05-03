@@ -5,9 +5,9 @@ export default sidebar({
     "",
     {
       text: "一些知识",
-      icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
+      icon: "book-tanakh",
+      prefix: "knowledge/",
+      link: "knowledge/",
       children: "structure",
     },
     {
