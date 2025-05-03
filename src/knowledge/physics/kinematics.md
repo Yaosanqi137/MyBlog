@@ -356,3 +356,34 @@ $v_车 = \frac{dl}{dt} = \frac{\xi{v_0}}{l} = \frac{\xi{v_0}}{\sqrt{\xi^2+h^2}}$
 $\rho = \frac{v^2}{a_n} = \frac{v^2_x + v^2_y}{a_n} = \frac{(v^2_0 + g^2t^2)^\frac{3}{2}}{gv_0}$
 
 这样就算出来了
+
+### 例3
+
+> 一质点做匀减速圆周运动，初始转速 n = 1500r/min，经 t = 50s 后静止。
+> （1）求角加速度$\alpha$和从开始到静止质点的转数 N
+> （2）求 t = 25s 时质点的角速度 $\omega$
+> （3）设圆的半径 R = 1m，求 t = 25s 时质点的速度和加速度的大小
+
+**解**
+
+**(1)**
+
+n = 1500r/min = 3000$\pi$rad/min = 50$\pi$rad/s
+
+则 $\alpha = \frac{0 - n}{t}$ = $-\pi$rad/$s^2$
+
+求总共转过的 rad 数 $\theta = \theta_0 + \omega_0t + \frac{1}{2}\alpha{t^2}$，其中$\theta_0 = 0$，求得 $\theta = 1250\pi rad$
+
+故总转数为 N = $\frac{1250\pi}{2\pi} = 625r$
+
+**(2)**
+
+显然，直接套公式 $\omega = \omega_0 + \alpha{t} = (50 - 25)rad/s = 25\pi{rad/s}$
+
+**(3)**
+
+由(2)，25s 时的质点速度 $v = R\omega \approx 78.5m/s$
+
+则法向加速度 $a_n = R\omega^2 = \frac{v^2}{R} \approx 6.16 \times 10^3m/s^2$
+
+切向加速度 $a_\tau = R\alpha \approx -3.14m/s^2$
