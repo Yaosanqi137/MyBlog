@@ -24,7 +24,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: '<img src="beian.png" width="16px"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=37021202001707" rel="noreferrer" target="_blank">鲁公网安备37021202001707号</a>|<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2025389882号</a><br>' +
+  footer: '<img src="http://gstech.fun/beian.png" width="16px"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=37021202001707" rel="noreferrer" target="_blank">鲁公网安备37021202001707号</a>|<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2025389882号</a><br>' +
       '本网站是个人网站，仅供个人学习使用，不包含任何企业、单位等任何非个人网站信息<br>' +
       '若被核实确实存在违规信息，本人愿意接受相关处罚。<br>' +
       'Copyright © 2025 Yaosanqi137 MIT Licensed',
