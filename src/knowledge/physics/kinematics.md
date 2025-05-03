@@ -387,3 +387,33 @@ n = 1500r/min = 3000$\pi$rad/min = 50$\pi$rad/s
 则法向加速度 $a_n = R\omega^2 = \frac{v^2}{R} \approx 6.16 \times 10^3m/s^2$
 
 切向加速度 $a_\tau = R\alpha \approx -3.14m/s^2$
+
+### 例4
+
+> $一质点沿 x 轴移动，其加速度 a = -kv^2，式中 k 为正常数，设 t = 0 时，x = 0，v = v_0$
+> $（1）求 v 和 x 作为 t 的函数的表达式$
+> $（2）求 v 作为 x 的函数的表达式$
+
+**解**
+
+**(1)**
+
+知，$a = -kv^2 = \frac{dv}{dt} \Rightarrow kdt = -\frac{1}{v^2}dv$
+
+两边积分得到 $kt = \frac{1}{v} + C_1$
+
+$令 t = 0，由此时 v = v_0，得 kt = \frac{1}{v} - \frac{1}{v_0}，整理得到 v = \frac{v_0}{1 + v_0kt}$
+
+我们又知道 $dx = vdt，将 v 的表达式代入
+
+$x = \int{\frac{v_0dt}{1 + v_0kt}} = \frac{1}{k}\ln{1 + kv_0t} + C_2$
+
+同理，带入初始情况解得 $x = \frac{1}{k}\ln{1 + kv_0t}$
+
+**(2)**
+
+因为 $a = \frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt} = v\frac{dv}{dx}$
+
+因此不难得到 $\frac{vdv}{dx} = -kv^2$
+
+步骤和 (1) 同理，我们可以得到 $v = v_0e^{-kx}$
