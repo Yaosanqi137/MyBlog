@@ -1,6 +1,6 @@
 ---
 cover: /assets/images/post3/head.png
-icon: network-wired
+icon: floppy-disk
 date: 2025-05-20
 category: 教程
 tag:
