@@ -219,11 +219,12 @@ class CNN(nn.Module):
 
 > A: 残差学习(residual learning)，主要解决了深度学习中的一个重大问题：退化问题(Degradation Problem)
 > 所谓退化问题，就是在神经网络变得越来越深的时候，准确率反而出现了下降
-> 在 ResNet 中，就应用了残差学习，通过学习残差而非直接学习目标
+> 在 ResNet 中，就应用了残差学习，通过学习残差而非直接学习目标，比如你想要把你的分数提高到 90 分，那么除了直接提高到 90 分
+> 假如你本身就已经考到 80 分了，那么你只需要在此基础上再提高 10 分就可以了，相比之下任务就更加清晰了
 > ![img5.png](../../.vuepress/public/assets/images/ai/post2/img5.png)
-> *出自https://developer.volcengine.com/articles/7382257117408788517*
-> 从理论上说，一般神经网络学习的是图中的 f(x) + x ，其中 f(x) 就是残差
-> 残差学习则摒弃了直接学习 f(x) + x 这样费时费力的操作，而是想办法把 f(x) 学习成 0 就可以了，这比拟合 f(x) + x 整体简单很多，也就更容易提升准确率了
+> *出自[Deep Residual Learning for Image Recognition，CVPR2016](https://arxiv.org/pdf/1512.03385)*
+> 也就是说，如果说传统网络的学校目标是 H(x) ，那么残差学习，就相当于在你原来就有 x 的情况下，再新学习一个 f(x) ，让 f(x) + x = H(x)
+> 这里的 f(x) 也就是残差了，极端情况下 f(x) = 0，相当于一个恒等映射(Identity mapping)，也就是什么都不学
 
 **`Q: 代码练习⼆⾥，⽹络和1989年 Lecun 提出的 LeNet 有什么区别？`**
 
