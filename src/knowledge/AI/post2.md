@@ -147,7 +147,7 @@ class CNN(nn.Module):
 
 这两个实验都挺好玩的，强烈推荐试试看
 
-## 问题解答
+## 思考题
 
 **`Q: dataloader ⾥⾯ shuffle 取不同值有什么区别？`**
 

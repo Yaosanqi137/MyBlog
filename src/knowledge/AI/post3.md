@@ -509,6 +509,8 @@ def resnext101_32x8d(num_classes=1000, include_top=True):
                   width_per_group=width_per_group)
 ```
 
+## 思考题
+
 **`Q: Residual learning 的基本原理?`**
 
 > A: 如文章第一部分
