@@ -515,7 +515,7 @@ def resnext101_32x8d(num_classes=1000, include_top=True):
 
 > A: 如文章第一部分
 
-**`Q: Batch Normailization 的原理，思考 BN、LN、IN 的主要区别`**
+**`Q: Batch Normalization 的原理，思考 BN、LN、IN 的主要区别`**
 
 > A: 在网络调整权重的时候，因为其他神经元的权重变了，导致其他的神经元也会变，那么，如果网络很深，就会导致这个调整过程异常艰难，这被称为内部协变量偏移(Internal Covariate Shift)
 > 在这种情况下，学习率就不得不变低，就意味着学习缓慢甚至最后直接不收敛了，此时，就可以用 批归一化(Batch Normalization) 了，简称 BN
