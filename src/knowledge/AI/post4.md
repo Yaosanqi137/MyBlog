@@ -35,20 +35,20 @@ ShuffleNet ⽹络讲解：https://www.bilibili.com/video/BV15y4y1Y7SY/
 - 卷积核channel = 输入特征矩阵channel
 - 输出特征矩阵channel = 卷积核个数
 
-![传统卷积](../../.vuepress/public/assets/images/post4/img1.png)
+![传统卷积](../../.vuepress/public/assets/images/ai/post4/img1.png)
 
 而 MobileNet 提出了一种卷积，叫 **DW卷积**(Depthwise Conv, 深度卷积)，他的特性如下
 
 - 卷积核channel = 1
 - 输入特征矩阵channel=卷积核个数=输出特征矩阵channel
 
-![DW卷积](../../.vuepress/public/assets/images/post4/img2.png)
+![DW卷积](../../.vuepress/public/assets/images/ai/post4/img2.png)
 
 从图中我们看到，一个 `3x3` 卷积核只负责一个 channel ，一共 input_channel 个卷积核
 
 此外，他们还提出了一种 **PW卷积**(Pointwise Conv, 点卷积)
 
-![PW卷积](../../.vuepress/public/assets/images/post4/img3.png)
+![PW卷积](../../.vuepress/public/assets/images/ai/post4/img3.png)
 
 从图中我们发现，这里则是 out_channel 个 `1x1xinput_channel` 的卷积核
 
@@ -56,11 +56,11 @@ ShuffleNet ⽹络讲解：https://www.bilibili.com/video/BV15y4y1Y7SY/
 
 其基本结构如图
 
-![传统结构(左)搭配了DW卷积和PW卷积的深度可分离卷积基本结构(右)](../../.vuepress/public/assets/images/post4/img4.png)
+![传统结构(左)搭配了DW卷积和PW卷积的深度可分离卷积基本结构(右)](../../.vuepress/public/assets/images/ai/post4/img4.png)
 
 完整结构如下
 
-![MobileNet 结构](../../.vuepress/public/assets/images/post4/img5.png)
+![MobileNet 结构](../../.vuepress/public/assets/images/ai/post4/img5.png)
 
 虽然 MobileNet 本身已经很精简，但是有时候一些 App 需要模型非常非常精简和快速，于是，我们引入了一个参数
 
@@ -74,7 +74,7 @@ Width Multiplier 宽度超参数$\alpha$
 
 这个操作可以大大降低模型的计算量，对比图如下
 
-![计算量对比图](../../.vuepress/public/assets/images/post4/img6.png)
+![计算量对比图](../../.vuepress/public/assets/images/ai/post4/img6.png)
 
 *注：ImageNet Accuracy 是准确率，Million Mult-Adds 是计算量，Million Parameters 是百万参数量*
 
@@ -97,17 +97,17 @@ Resolution Multiplier 分辨率超参数$\rho$
 
 对比图如下
 
-![对比图1](../../.vuepress/public/assets/images/post4/img7.png)
+![对比图1](../../.vuepress/public/assets/images/ai/post4/img7.png)
 
 从上到下依次是传统卷积、深度可分离卷积、$\alpha$=0.75的情况、$\rho$=0.714的情况
 
 其中卷积核 3x3 ，feature map 14x14 输入通道 512 输出通道 512
 
-![对比图2](../../.vuepress/public/assets/images/post4/img8.png)
+![对比图2](../../.vuepress/public/assets/images/ai/post4/img8.png)
 
 最终性能对比图，这里不多说了，可以自己慢慢看
 
-![性能对比](../../.vuepress/public/assets/images/post4/img9.png)
+![性能对比](../../.vuepress/public/assets/images/ai/post4/img9.png)
 
 ### MobileNet-V2
 
@@ -121,7 +121,7 @@ Resolution Multiplier 分辨率超参数$\rho$
 
 当我们单独去看 feature map 每个通道的像素的值的时候，我们发现，低维的信息损失很严重，但是高维的信息还保留的不错，如图所示
 
-![输出](../../.vuepress/public/assets/images/post4/img11.png)
+![输出](../../.vuepress/public/assets/images/ai/post4/img11.png)
 
 这种损失导致的原因，是使用 ReLU 激活函数后导致的信息损耗，既然如此，我们有两种解决方法
 
@@ -130,9 +130,9 @@ Resolution Multiplier 分辨率超参数$\rho$
 
 在增加通道数这一块，则使用了倒残差结构，如图所示
 
-![残差结构(左)倒残差结构(右)](../../.vuepress/public/assets/images/post4/img10.png)
+![残差结构(左)倒残差结构(右)](../../.vuepress/public/assets/images/ai/post4/img10.png)
 
-![倒残差结构具体操作](../../.vuepress/public/assets/images/post4/img12.png)
+![倒残差结构具体操作](../../.vuepress/public/assets/images/ai/post4/img12.png)
 
 其中 k 和 k' 是指通道数，s 是指 stride，t 是拓展因子
 
@@ -140,17 +140,17 @@ Resolution Multiplier 分辨率超参数$\rho$
 
 此外，在倒残差结构中，并非所有倒残差结构都有 shortcut 连接，而是 stride=1 **并且** 输入特征矩阵和输出特征矩阵 shape 相同时才有(毕竟 shape 不同做不了加法运算)
 
-![shortcut](../../.vuepress/public/assets/images/post4/img14.png)
+![shortcut](../../.vuepress/public/assets/images/ai/post4/img14.png)
 
 他的详细网络结构如下
 
-![具体结构](../../.vuepress/public/assets/images/post4/img13.png)
+![具体结构](../../.vuepress/public/assets/images/ai/post4/img13.png)
 
 其中，t 表示拓展因子，c 表示输出通道数，n 表示结构的重复次数，s 表示 stride
 
 说了这么多，来看看在 ImageNet 上的性能表现吧
 
-![性能表现](../../.vuepress/public/assets/images/post4/img15.png)
+![性能表现](../../.vuepress/public/assets/images/ai/post4/img15.png)
 
 #### 代码实现
 
@@ -290,7 +290,7 @@ V3 相比于 V2 主要有以下改进
 
 它们的图像是这样的
 
-![硬激活函数](../../.vuepress/public/assets/images/post4/img16.png)
+![硬激活函数](../../.vuepress/public/assets/images/ai/post4/img16.png)
 
 而他们的表达式是这样的
 
@@ -320,11 +320,11 @@ class hsigmoid(nn.Module):
 
 图中下面那条 Bottleneck 结构下的神秘小路，就是 SE 模块
 
-![SE模块](../../.vuepress/public/assets/images/post4/img17.png)
+![SE模块](../../.vuepress/public/assets/images/ai/post4/img17.png)
 
 这条小路的工作路线如下
 
-![SE 模块](../../.vuepress/public/assets/images/post4/img18.png)
+![SE 模块](../../.vuepress/public/assets/images/ai/post4/img18.png)
 
 先过一个平均池化，压成一个 `1x1xchannel` 的长条，然后再过两遍全连接层并分别用 ReLU 和 H-Sigmoid 激活，最后把得到的数乘给原来张量的每一个元素，这个就叫 SE 模块
 
@@ -340,19 +340,19 @@ SE 全称 Squeeze-and-Excitation，挤压(Squeeze) 和 激励(Excitation)
 
 论文中提到，最后的几层性能不是特别好，经过优化，为整个网络节省了 11% 的计算时间
 
-![耗时层](../../.vuepress/public/assets/images/post4/img19.png)
+![耗时层](../../.vuepress/public/assets/images/ai/post4/img19.png)
 
 注意，最后的 1x1 卷积，其实就相当于一层全连接层
 
 最后我们来看看网络的结构和性能表现吧
 
-![MobileNet-V3-Large](../../.vuepress/public/assets/images/post4/img20.png)
+![MobileNet-V3-Large](../../.vuepress/public/assets/images/ai/post4/img20.png)
 
-![MobileNet-V3-SMALL](../../.vuepress/public/assets/images/post4/img21.png)
+![MobileNet-V3-SMALL](../../.vuepress/public/assets/images/ai/post4/img21.png)
 
 注：SE 表示是否有 SE 模块，HS 表示使用 h-swish 激活函数，RE 表示 ReLU ，s 表示 stride ，NBN 表示不使用 BN
 
-![性能表现](../../.vuepress/public/assets/images/post4/img22.png)
+![性能表现](../../.vuepress/public/assets/images/ai/post4/img22.png)
 
 其中 P-1 P-2 P-3 都是谷歌自己研发的 Pixel 手机
 
@@ -635,7 +635,7 @@ def mobilenet_v3_small(
 
 这也是个给移动设备用的模型，不过它引入了两个全新的概念 逐点组卷积(Pointwise Group Convolution)和通道洗牌(Channel Shuffle)，从而减小了计算量
 
-![对比图](../../.vuepress/public/assets/images/post4/img23.png)
+![对比图](../../.vuepress/public/assets/images/ai/post4/img23.png)
 
 群卷积其实之前的 ResNeXt 就已经讲过了(如图a)，不过这个分组的话，每一组都是隔离开的，但是如果这样的话，会导致各组的信息无法沟通，而如果使用 1x1 逐点卷积，则会导致性能下降等副作用
 
@@ -677,7 +677,7 @@ print(x.shape)
 
 了解了它的洗牌过程，现在来看看它的基本结构
 
-![基本结构](../../.vuepress/public/assets/images/post4/img24.png)
+![基本结构](../../.vuepress/public/assets/images/ai/post4/img24.png)
 
 其中，(a) 是一个残差模块，(b) 是 ShuffleNet Unit ，将原来的 1x1 卷积换成了逐点组卷积，并增加了洗牌操作，(c) 是做了降采样的 ShuffleNet Unit
 
@@ -685,11 +685,11 @@ print(x.shape)
 
 现在来看看整体结构吧
 
-![整体结构](../../.vuepress/public/assets/images/post4/img25.png)
+![整体结构](../../.vuepress/public/assets/images/ai/post4/img25.png)
 
 关于性能对比上，原文中篇幅比较长，这里就不放了，总结就是比 MobileNet-V1 效果好几个百分点
 
-![ShuffleNet vs. MobileNet](../../.vuepress/public/assets/images/post4/img26.png)
+![ShuffleNet vs. MobileNet](../../.vuepress/public/assets/images/ai/post4/img26.png)
 
 #### 代码实现
 
@@ -703,7 +703,7 @@ V2 感觉有点复杂，了解一点就可以了，个人觉得这篇文章写�
 
 SENet 是什么呢，大家还记得刚刚说的 SE 模块吧，其实基本上也就那样，看看图就明白了
 
-![SE-Inception(左) 和 SE-ResNet(右)](../../.vuepress/public/assets/images/post4/img27.png)
+![SE-Inception(左) 和 SE-ResNet(右)](../../.vuepress/public/assets/images/ai/post4/img27.png)
 
 花销大概增加了 2%~10%，增加的参数都在 SE 的两个全连接层上，但是计算量增加量理论上小于 1%
 
@@ -711,7 +711,7 @@ SENet 是什么呢，大家还记得刚刚说的 SE 模块吧，其实基本上�
 
 ### 实验
 
-![SE-Net 实验](../../.vuepress/public/assets/images/post4/img28.png)
+![SE-Net 实验](../../.vuepress/public/assets/images/ai/post4/img28.png)
 
 效果确实不错，而且训练看起来也蛮快的，用 V100-16G 练大概 10 秒多一些一个 epoch
 
@@ -721,7 +721,7 @@ SENet 是什么呢，大家还记得刚刚说的 SE 模块吧，其实基本上�
 
 那你一定会问，这和多通道的卷积，有什么区别呢？
 
-![3D 与 2D 卷积](../../.vuepress/public/assets/images/post4/img29.png)
+![3D 与 2D 卷积](../../.vuepress/public/assets/images/ai/post4/img29.png)
 
 的确，这玩意看起来会搞乱通道之间的关系，也会把模型搞的很复杂，但是你都想到通道了，那 3D 卷积就不能再往上有通道了吗？
 
@@ -729,7 +729,7 @@ SENet 是什么呢，大家还记得刚刚说的 SE 模块吧，其实基本上�
 
 ### 实验
 
-![HybridSN 代码作业](../../.vuepress/public/assets/images/post4/img30.png)
+![HybridSN 代码作业](../../.vuepress/public/assets/images/ai/post4/img30.png)
 
 实验过程没什么好讲的了，但是要注意一点，就是代码 [12] 的第 24 行，原来是
 
