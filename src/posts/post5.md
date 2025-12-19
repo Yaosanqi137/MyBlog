@@ -79,7 +79,7 @@ $env:ANTHROPIC_API_KEY="sk-xxx"
 
 当然，你可以不输入 PowerShell 指令，只需要修改一个配置文件即可，并且在身边没有文档时是更方便的
 
-打开路径 `C:\Users\你的用户名\.claude` ，里面有一个叫 `settings.json` 的配置文件，里面是长这样的
+打开路径 `C:\Users\你的用户名\.claude` ，里面有一个叫 `settings.json` 的配置文件（初次启动完成以后才会出现，此前可以自己创建），里面是长这样的
 
 ```json
 {
