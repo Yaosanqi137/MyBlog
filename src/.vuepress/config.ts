@@ -20,4 +20,15 @@ export default defineUserConfig({
   // shouldPrefetch: false,
 
     theme,
+    head: [
+        [
+            "script",
+            {},
+            `
+            <!-- Cloudflare Web Analytics -->
+            <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2b0f222eb4b7437f9447c9b911c6d590"}'></script>
+            <!-- End Cloudflare Web Analytics -->
+            `,
+        ]
+    ]
 });
