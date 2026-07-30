@@ -227,6 +227,8 @@ reload
 
 ![](/assets/images/post7/img10.png)
 
+*注意: 最后系统在 Flash Memory Write 阶段的时候，有可能 Copy code image done 迟迟不出现，这并不是刷机失败了，其实按一下回车就会出现了*
+
 ## 刷后配置
 
 ### 修复 MAC 地址
