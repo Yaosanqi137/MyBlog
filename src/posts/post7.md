@@ -1,5 +1,5 @@
 ---
-icon: router
+icon: network-wired
 date: 2026-07-22
 category: 教程
 tag:
