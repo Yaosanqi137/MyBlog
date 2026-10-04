@@ -62,7 +62,7 @@ $\mathcal{N}(x;\, \mu,\, \sigma^2)$
 
 不过，深度学习是张量的艺术，我们还需要定义一种针对张量的高斯分布：
 
-![](/assets/images/CME296/img.png)
+![](/assets/images/CME296/post1/img.png)
 
 其中：
 
@@ -149,7 +149,7 @@ $D_{\text{KL}}(P \parallel Q) = \int p(x) \log \left( \frac{p(x)}{q(x)} \right) 
 
 所谓扩散模型，就是一开始给你一张完全是噪声的图片，模型一点一点地把噪声去掉，然后从噪声里面剥出一张好看的图片。就像雕刻家雕一块石头一样，从一块不规则形状的石头里雕刻出一块精美的雕塑（不过我看人脑里多少也有点扩散模型的意思，每次看到毫无关联的“噪声”图片时脑子里瞬间就绘制出梗图了）
 
-![Fig.1 Diffusion 模型生图过程](/assets/images/CME296/img1.png)
+![Fig.1 Diffusion 模型生图过程](/assets/images/CME296/post1/img1.png)
 
 不过，这块完全是噪声的"石头"也不是河边随便找一个石头就可以雕刻出好康的东西的，不然我为什么不直接用全是 RGB(255,255,255) 的图片原地生图。我先说说这块石头的要求：
 
@@ -177,13 +177,13 @@ $D_{\text{KL}}(P \parallel Q) = \int p(x) \log \left( \frac{p(x)}{q(x)} \right) 
 
 :::
 
-![Fig.2 给图片加上噪声](/assets/images/CME296/img2.png)
+![Fig.2 给图片加上噪声](/assets/images/CME296/post1/img2.png)
 
 ### 图片如何表示
 
 要把图片拿给模型处理，自然要先把他变为一个数学对象来进行处理。当然，我们很自然就能想到用张量来表示它：
 
-![Fig.3 图片是张量](/assets/images/CME296/img3.png)
+![Fig.3 图片是张量](/assets/images/CME296/post1/img3.png)
 
 所以，我们下面说的 x ，都不是一个单纯的数字变量，而是一个张量变量，一定要切记
 
@@ -213,7 +213,7 @@ $q(x_t \mid x_{t-1}) = \mathcal{N}\left(x_t;\, W x_{t-1},\, V^2 I\right)$
 
 什么？什么叫也可以服从其他分布？我们看到下面的图：
 
-![Fig.4 概率分布 q 是我们自己选的](/assets/images/CME296/img4.png)
+![Fig.4 概率分布 q 是我们自己选的](/assets/images/CME296/post1/img4.png)
 
 如图所示，总之给图片加噪声就是这个公式： 噪声图像 = 啥啥*原图 + 啥啥*噪声，也就是 $x_{t} = W\times x_{t-1} + V\times\epsilon$ (其中 $\epsilon \sim \mathcal{N}(0, I)$ 因为它是高斯噪声)。但别忘了，这个公式是我们自己定义的，反正有无数种方法能把 $x_{t}$ 搞出来，这只是其中一种，也是最聪明的一种。
 
@@ -335,7 +335,7 @@ $x_t=\sqrt{\bar\alpha_t}\,x_0+\sqrt{1-\bar\alpha_t}\,\epsilon$
 
 前面折腾半天，我们已经知道怎么从照片 $x_0$ 得到一张噪声图 $x_t$ 了。但生图的时候我们的模型要做的事情恰好相反：给你一张噪声图 $x_t$，让你把它变回噪声少一点的 $x_{t-1}$。这样一层一层剥下去，最后才能得到图片。
 
-![Fig.5 图片去噪过程](/assets/images/CME296/img5.png)
+![Fig.5 图片去噪过程](/assets/images/CME296/post1/img5.png)
 
 这里我们先把两个字母搞清楚，不然后面看公式真的很容易晕：
 
