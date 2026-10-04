@@ -1,7 +1,7 @@
 ---
 icon: hexagon-nodes
-date: 2025-09-17
-category: 公开课
+date: 2026-10-2
+category: 周报
 tag:
   - Diffusion
   - 人工智能
