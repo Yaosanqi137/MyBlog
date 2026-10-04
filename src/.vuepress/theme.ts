@@ -97,6 +97,7 @@ export default hopeTheme({
     sup: true,
     tabs: true,
     tasklist: true,
+    mermaid: true,
     vPre: true,
 
     // 取消注释它们如果你需要 TeX 支持
