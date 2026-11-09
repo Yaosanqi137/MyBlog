@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "yao37的小博客",
-  description: "yao37的小博客",
+  title: "个人电脑使用经验",
+  description: "个人电脑使用经验",
 
   bundler: viteBundler({
     viteOptions: {

@@ -2,10 +2,10 @@
 home: true
 layout: BlogHome
 icon: house
-title: yao三七的小博客
+title: 个人电脑使用经验
 bgImage: default.png
 heroImage: head.svg
-heroText: Yao三七的小博客
+heroText: 个人电脑使用经验
 heroFullScreen: true
 tagline: 我的计算机学习分享博客
 projects:
